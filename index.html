@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Formulário - Games</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="interface">
+        <header class="topo">
+            <img src="./img/logo.png" alt="Controle de Videogame">
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">Contatos</a></li>
+                    <li><a href="fotos.html">Fotos</a></li>
+                    <li><a href="midia.html">Mídias</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="banner_anime">
+            <img id="anime1" src="./img/banner1.jpg" alt="Jogo God Of War">
+            <img id="anime2" src="./img/banner2.jpg" alt="Jogo God Of War">
+        </div>
+
+        <h1> Entre em Contato </h1>
+
+        <form action="">
+            <fieldset> <!-- Conjunto de Campos -->
+                <legend>Identificação do Usuário</legend>
+
+                <P>
+                    <label for="campo_nome">Nome</label>
+                    <input type="text" name="nome" id="campo_nome" size="30" maxlength="50" placeholder="Nome Completo"
+                        required autofocus>
+                </P>
+
+                <p>
+                    <label for="campo_email">E-mail</label>
+                    <input type="email" name="E-mail" id="campo_email" size="30" maxlength="50" placeholder="Seu E-mail"
+                        required>
+                </p>
+
+                <p>
+                    <label for="campo_senha">Senha</label>
+                    <input type="password" name="senha" id="campo_senha" size="8" maxlength="8" placeholder="8 Digitos"
+                        required>
+                </p>
+
+                <fieldset>
+                    <legend>Sexo</legend>
+
+                    <p>
+                        <input type="radio" name="sexo" id="campo_masc" checked>
+                        <label for="campo_masc">Masculino</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="sexo" id="campo_fem">
+                        <label for="campo_fem">Feminino</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" name="sexo" id="campo_outros">
+                        <label for="campo_outros">Outros</label>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <label for="campo_nasc">Data de Nascimento</label>
+                    <input type="date" nome="nasc" id="campo_nasc">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <p>
+                    <label for="campo_rua">Logradouro</label>
+                    <input type="text" name="rua" id="campo_rua" size="50" maxlength="50"
+                        placeholder="Rua, Av., Trav...">
+                </p>
+
+                <p>
+                    <label for="campo_numero">Número</label>
+                    <input type="number" name="numero" id="campo_numero" min="0" max="9999" placeholder="Nº">
+                </p>
+
+                <p>
+                    <label for="campo_estado">Estado</label>
+                    <select name="estado" id="campo_estado">
+                        <optgroup label="Região Sudeste">
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espírito Santo</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Gramde do Sul</option>
+                            <option value="PR">Paraná</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="campo_cidade">Cidade</label>
+                    <input type="text" name="cidade" id="campo_cidade" size="40" maxlength="40"
+                        placeholder="Sua Cidade">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Mensagem </legend>
+
+                <p>
+                    <label for="campo_urgencia">Grau de Urgência</label>
+                    Mín<input type="range" name="urgencia" id="campo_urgencia" min="0" max="10" step="1">Máx
+                </p>
+
+                <p>
+                    <label for="campo_mensagem">Mensagem:</label>
+                </p>
+                <p>
+                    <textarea name="mensagem" id="campo_mensagem" rows="7" cols="70"
+                        placeholder="Digite sua Mensagem..."></textarea>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quero um Console</legend>
+                <p>
+                    <input type="checkbox" name="pedido" id="campo_check" checked>
+                    <label for="campo_check">Gostaria de adquirir um Console quando disponível</label>
+                </p>
+
+                <p>
+                    <label for="campo_console">Console</label>
+                    <select name="console" id="campo_console">
+                        <option value="PS">Playstation</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="Nintendo">Nintendo</option>
+                        <option value="Steam">Valve</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="campo_cor">Cor</label>
+                    <input type="color" name="cor" id="campo_cor" value="#0000FF">
+                </p>
+
+                <p>
+                    <label for="campo_qtde">Qtde</label>
+                    <input type="number" name="Qtde" id="campo_qtde" min="0" max="5" value="0">
+                </p>
+
+                <p>
+                    <label for="campo_total">Preço Total: R$</label>
+                    <input type="text" name="total" id="campo_total" placeholder="Total a Pagar" readonly>
+                </p>
+            </fieldset>
+
+            <div>
+                <button type="submit" name="enviar" class="btn">Enviar</button>
+                <button type="reset" name="limpar" class="btn">Limpar</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
